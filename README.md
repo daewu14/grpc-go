@@ -1,4 +1,4 @@
-# Order Service Testing
+# GRPC Order Service (HTTP & gRPC)
 
 This project contains unit tests for the **Order Service** in a gRPC-based application.It uses a mock implementation of the OrderService client for testing purposes.
 
