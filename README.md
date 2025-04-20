@@ -15,13 +15,18 @@ This project contains unit tests for the **Order Service** in a gRPC-based appli
     ```
    this app running on port 8000.
 
-## Overview
+## API Testing Example (HTTP Test)
+The following command demonstrates test execution and displays detailed results:
 
-The provided `TestNewCreateOrderHandler` function verifies the behavior of the `CreateOrder` handler with various test cases.These include scenarios with successful responses, validation errors, gRPC errors, and invalid gRPC responses.
-
-## Mock Implementation
-
-The `mockOrderServiceClient` is a mock of the `OrderServiceClient` interface, with predefined responses and errors for the `CreateOrder` and `GetOrders` methods.
+```curl
+curl --location 'http://localhost:8000/orders' \
+--header 'Content-Type: application/json' \
+--data '{
+    "CustomerID": 42,
+    "ProductID": 32,
+    "Quantity": 3
+}'
+```
 
 ## Test Cases
 
@@ -54,7 +59,7 @@ Each test case provides:
 
 ## Testing Frameworks
 
-- [**Testify**](https: //github.com/stretchr/testify): Used for assertions to validate test results.
+- [**Testify**](https://github.com/stretchr/testify): Used for assertions to validate test results.
 
 ## How to Run Tests
 
@@ -88,17 +93,4 @@ Example output:
     --- PASS: TestNewCreateOrderHandler/invalid_grpc_response (0.00s)
 PASS
 ok      grpc/test       (cached)
-```
-
-## Testing Example (API Test)
-The following command demonstrates test execution and displays detailed results:
-
-```curl
-curl --location 'http://localhost:8000/orders' \
---header 'Content-Type: application/json' \
---data '{
-    "CustomerID": 42,
-    "ProductID": 32,
-    "Quantity": 3
-}'
 ```
