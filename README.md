@@ -1,6 +1,7 @@
 # GRPC Order Service (HTTP & gRPC)
 
-This project contains unit tests for the **Order Service** in a gRPC-based application.It uses a mock implementation of the OrderService client for testing purposes.
+## Concept
+<img src="https://raw.githubusercontent.com/daewu14/grpc-go/refs/heads/main/assets/IMG_1894.png">
 
 ## Run Application
 1. Open 2 terminal windows.
